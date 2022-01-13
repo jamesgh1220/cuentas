@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuentas James</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+
+<body>
+        <div class="jumbotron p-4">
+            <h3 class="display-6">Cuentas James Gallego Hdez.</h3>
+            <hr class="my-4 bg-gradient-success">
+            <div class="row">
+                <div class="col-md-5">
+                    <h4>Agregar Cuota</h4>
+                    <hr class="my-4 bg-gradient-success">
+                    <form id="cuotaForm">
+                        <input type="hidden" id="cuotaId">
+                        <div class="form-group">
+                            <label for="exampleSelect1" class="form-label mt-4">Seleccionar préstamo:</label>
+                            <br>
+                            <select class="form-select" id="tipoPrestamo">
+                                <option value="cuota">Préstamo Dora</option>
+                                <option value="cuotaMama">Préstamo Mamá</option>
+                                <option value="salud">Salud EPS</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label col-form-label-lg" for="inputLarge">Fecha de la cuota:</label>
+                            <input type="date" id="fecha" class="form-control" placeholder="Fecha de la cuota:">
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label col-form-label-lg" for="inputLarge">Valor cuota:</label>
+                            <input id="valor" type="number" class="form-control" placeholder="Valor cuota">
+                        </div>
+                        <div class="form-group">
+                            <br>
+                            <textarea class="form-control" id="descripcion" placeholder="Descripción de la cuota:"
+                                rows="3"></textarea>
+                        </div>
+                        <div style="margin-left: 180px;">
+                            <button type="submit" class="btn btn-outline-success">Agregar cuota</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-7">
+                    <div class="card-header">
+                        <h4>Préstamo Dora:</h4>
+                    </div>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr class="table-success">
+                                <td>Fecha</td>
+                                <td>Descripción</td>
+                                <td>Valor</td>
+                            </tr>
+                        <tbody id="cuotas">
+    
+                        </tbody>
+                        </thead>
+                    </table>
+                    <h3 id="totalPrestamo" style="color: #2aa198"></h3>
+                    <hr class="my-4 bg-gradient-success">
+    
+                    <div class="card-header">
+                        <h4>Préstamo Mamá:</h4>
+                    </div>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr class="table-success">
+                                <td>Fecha</td>
+                                <td>Descripción</td>
+                                <td>Valor</td>
+                            </tr>
+                        <tbody id="cuotas2">
+    
+                        </tbody>
+                        </thead>
+                    </table>
+                    <h3 id="totalMama" style="color: #2aa198"></h3>
+                    <hr class="my-4 bg-gradient-success">
+    
+                    <div class="card-header">
+                        <h4>Salud EPS:</h4>
+                    </div>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr class="table-success">
+                                <td>Fecha</td>
+                                <td>Descripción</td>
+                                <td>Valor</td>
+                            </tr>
+                        <tbody id="cuotas3">
+    
+                        </tbody>
+                        </thead>
+                    </table>
+                    <hr class="my-4 bg-gradient-success">
+                </div>
+            </div>
+        </div>
+    <!--Incluyendo JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
